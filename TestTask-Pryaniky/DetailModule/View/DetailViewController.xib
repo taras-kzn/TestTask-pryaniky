@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6o-ES-yDZ">
-                    <rect key="frame" x="20" y="108" width="374" height="390"/>
+                    <rect key="frame" x="20" y="108" width="374" height="423"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZyU-tC-zxc">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="390"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="423"/>
                         </imageView>
                     </subviews>
                     <constraints>
@@ -35,7 +35,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ac3-NY-LUy">
-                    <rect key="frame" x="20" y="518" width="374" height="50"/>
+                    <rect key="frame" x="20" y="551" width="374" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Cz7-Fu-2h6"/>
                     </constraints>
@@ -43,14 +43,24 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHf-fF-gmT">
+                    <rect key="frame" x="110" y="732" width="194" height="30"/>
+                    <state key="normal" title="Назад"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="hTT-Zx-voe"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OHf-fF-gmT" secondAttribute="bottom" constant="100" id="4XD-O5-ypq"/>
                 <constraint firstItem="ac3-NY-LUy" firstAttribute="top" secondItem="e6o-ES-yDZ" secondAttribute="bottom" constant="20" id="CcU-S5-bnv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OHf-fF-gmT" secondAttribute="trailing" constant="110" id="Kuy-Yl-zkK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e6o-ES-yDZ" secondAttribute="trailing" constant="20" id="MSt-i7-JLD"/>
+                <constraint firstItem="OHf-fF-gmT" firstAttribute="top" secondItem="ac3-NY-LUy" secondAttribute="bottom" constant="131" id="P9m-oh-7sC"/>
+                <constraint firstItem="OHf-fF-gmT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="110" id="Ugg-Dv-eKw"/>
                 <constraint firstItem="e6o-ES-yDZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VEQ-ZW-HXj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ac3-NY-LUy" secondAttribute="trailing" constant="20" id="hTW-h4-0tx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ac3-NY-LUy" secondAttribute="bottom" constant="294" id="qyt-61-poT"/>
                 <constraint firstItem="ac3-NY-LUy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="s9Y-Py-9j5"/>
                 <constraint firstItem="e6o-ES-yDZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="tCQ-kw-gPC"/>
             </constraints>

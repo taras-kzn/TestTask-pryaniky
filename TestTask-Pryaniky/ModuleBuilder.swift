@@ -8,25 +8,25 @@
 
 import UIKit
 //MARK: - Protocol
-protocol Builder {
-    static func creatMainModule() -> UIViewController
-    static func creatDetailModule(infoData: ArrayData?) -> UIViewController
+protocol AssemblyBuilderProtocol {
+    func creatMainModule(router: RouterProtocol) -> UIViewController
+    func creatDetailModule(infoData: ArrayData?, router: RouterProtocol) -> UIViewController
 }
 
-class ModuleBuilder: Builder {
+class ModuleBuilder: AssemblyBuilderProtocol {
     
-    static func creatMainModule() -> UIViewController {
+    func creatMainModule(router: RouterProtocol) -> UIViewController {
         let view = MainViewController()
         let networService = NetworkService()
-        let presenter = MainPresenter(view: view, networkService: networService)
+        let presenter = MainPresenter(view: view, networkService: networService, router: router)
         view.presenter = presenter
         return view
     }
     
-    static func creatDetailModule(infoData: ArrayData?) -> UIViewController {
+    func creatDetailModule(infoData: ArrayData?, router: RouterProtocol) -> UIViewController {
         let view = DetailViewController()
         let networkService = NetworkService()
-        let presenter = DetailPresenter(view: view, networkService: networkService, infoData: infoData)
+        let presenter = DetailPresenter(view: view, networkService: networkService, router: router, infoData: infoData)
         view.presenter = presenter
         return view
     }

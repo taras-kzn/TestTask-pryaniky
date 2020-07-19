@@ -9,9 +9,9 @@
 import UIKit
 
 final class MainTableViewCell: UITableViewCell {
-    
+    //MARK: - IBOutlet
     @IBOutlet private var infoLabel: UILabel!
-    
+    //MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -20,7 +20,7 @@ final class MainTableViewCell: UITableViewCell {
         super.prepareForReuse()
         infoLabel.text = nil
     }
-    
+    //MARK: Function
     func congigure(model: ArrayData?) {
         guard let name = model?.name else { return }
         infoLabel.text = name

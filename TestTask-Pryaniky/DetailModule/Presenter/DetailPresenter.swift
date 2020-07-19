@@ -11,24 +11,31 @@ import UIKit
 protocol DetailViewProtocol: class {
     func setData(infoData: ArrayData?)
     func setImage(infoData: ArrayData?, image: UIImage?)
+    func setVarinats(varinat: String?)
 }
 
 protocol DetailViewPresenterProtocol: class {
-    init(view: DetailViewProtocol, networkService: NetworkServiceProtocol,infoData: ArrayData?)
+    init(view: DetailViewProtocol, networkService: NetworkServiceProtocol,router: RouterProtocol ,infoData: ArrayData?)
     func startData()
     func startImage()
+    func startVarinats()
+    func tap()
 }
-
+//MARK: - Class
 class DetailPresenter: DetailViewPresenterProtocol {
-    weak var view: DetailViewProtocol?
-    let networService: NetworkServiceProtocol
+    //MARK: - Propertise
+    private weak var view: DetailViewProtocol?
+    private let networService: NetworkServiceProtocol
+    private var router: RouterProtocol?
     var infoData: ArrayData?
-    required init(view: DetailViewProtocol, networkService: NetworkServiceProtocol, infoData: ArrayData?) {
+    //MARK: - Init
+    required init(view: DetailViewProtocol, networkService: NetworkServiceProtocol,router: RouterProtocol, infoData: ArrayData?) {
         self.view = view
         self.networService = networkService
         self.infoData = infoData
+        self.router = router
     }
-    
+    //MARK: - Functions
     public func startData() {
         self.view?.setData(infoData: infoData)
     }
@@ -40,5 +47,21 @@ class DetailPresenter: DetailViewPresenterProtocol {
                 self.view?.setImage(infoData: self.infoData, image: image)
             }
         }
+    }
+    
+    public func startVarinats() {
+        guard let array = infoData?.data.variants else { return }
+        DispatchQueue.main.async {
+            for varinats in array {
+                if self.infoData?.data.selectedId == varinats.id {
+                    let varinat = varinats.text
+                    self.view?.setVarinats(varinat: varinat)
+                }
+            }
+        }
+    }
+    
+    func tap() {
+        router?.popToRoot()
     }
 }

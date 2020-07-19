@@ -10,12 +10,12 @@ import UIKit
 
 final class MainViewController: UIViewController {
     //MARK: - Outlet
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
     //MARK: - Properties
-    let nibNameMain = "MainTableViewCell"
+    private let nibNameMain = "MainTableViewCell"
     var presenter: MainViewPresenterProtcol!
     
-    //MARK: - View Life Cycle
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,8 +48,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = presenter.pryaniky?.data[indexPath.row]
-        let detailVC = ModuleBuilder.creatDetailModule(infoData: data)
-        navigationController?.pushViewController(detailVC, animated: true)
+        presenter.tapOnTheInfoData(infoData: data)
     }
 }
 //MARK: - MainViewProtocol

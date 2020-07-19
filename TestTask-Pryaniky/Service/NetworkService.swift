@@ -28,32 +28,27 @@ class NetworkService: NetworkServiceProtocol {
                 completion(.failure(error))
                 return
             }
-            
+            guard let data = data else {
+                return
+            }
             do {
-                let obj = try JSONDecoder().decode(Pryaniky.self, from: data!)
+                let obj = try JSONDecoder().decode(Pryaniky.self, from: data)
                 completion(.success(obj))
             } catch {
                 completion(.failure(error))
             }
         }.resume()
     }
-    
+    //MARK: - Function Image
     func downloadImage(url: String?, completion: @escaping(UIImage?) -> Void) {
-        guard let urlImage = url else {return}
-        guard let url = URL(string: urlImage) else {
-            return
+        guard let urlImage = url,
+            let url = URL(string: urlImage)  else {
+                return
         }
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let dataImage = data else {return}
             let image = UIImage(data: dataImage)
             completion(image)
-//            do {
-//                guard let dataImage = data else {return}
-//                let image = UIImage(data: dataImage)
-//                completion(image)
-//            } catch {
-//                print(error.localizedDescription)
-//            }
         }.resume()
     }
 }

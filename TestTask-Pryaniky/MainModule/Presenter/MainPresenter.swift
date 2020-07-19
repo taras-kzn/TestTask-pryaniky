@@ -14,23 +14,28 @@ protocol MainViewProtocol: class {
 }
 
 protocol MainViewPresenterProtcol: class {
-    init(view: MainViewProtocol, networkService: NetworkServiceProtocol)
+    init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol)
     func getPryaniky()
+    func tapOnTheInfoData(infoData: ArrayData?)
     var pryaniky: Pryaniky? { get set }
 }
+
 //MARK: - Class Presenter
 class MainPresenter: MainViewPresenterProtcol {
     //MARK: - Properties
-    weak var view: MainViewProtocol?
-    let networkService: NetworkServiceProtocol
+    private weak var view: MainViewProtocol?
+    private var router: RouterProtocol?
+    private let networkService: NetworkServiceProtocol!
     var pryaniky: Pryaniky?
+    
     //MARK: - init
-    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
+    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol) {
         self.view = view
         self.networkService = networkService
+        self.router = router
         getPryaniky()
     }
-    //MARK: - Function get
+    //MARK: - Functions
     func getPryaniky() {
         networkService.getData { [weak self] result in
             guard let self = self  else { return }
@@ -44,6 +49,10 @@ class MainPresenter: MainViewPresenterProtcol {
                 }
             }
         }
+    }
+    
+    func tapOnTheInfoData(infoData: ArrayData?) {
+        router?.showDatail(infoData: infoData)
     }
 }
 
