@@ -24,6 +24,8 @@
 		845CAB8224C3103500350FA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB8024C3103500350FA1 /* MainViewController.swift */; };
 		845CAB8324C3103500350FA1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845CAB8124C3103500350FA1 /* MainViewController.xib */; };
 		845CAB8524C3116400350FA1 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB8424C3116400350FA1 /* DetailPresenter.swift */; };
+		845CAB8A24C318E700350FA1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB8824C318E700350FA1 /* DetailViewController.swift */; };
+		845CAB8B24C318E700350FA1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845CAB8924C318E700350FA1 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		845CAB8024C3103500350FA1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		845CAB8124C3103500350FA1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		845CAB8424C3116400350FA1 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		845CAB8824C318E700350FA1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		845CAB8924C318E700350FA1 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				845CAB7424C2A78B00350FA1 /* MainModule */,
+				845CAB8624C3176900350FA1 /* DetailModule */,
 				845CAB7A24C2B98100350FA1 /* Service */,
 				845CAB3B24C20BBD00350FA1 /* SceneDelegate.swift */,
 				845CAB7E24C2EC9A00350FA1 /* ModuleBuilder.swift */,
@@ -127,7 +132,6 @@
 				845CAB4224C20BC000350FA1 /* Assets.xcassets */,
 				845CAB4424C20BC000350FA1 /* LaunchScreen.storyboard */,
 				845CAB4724C20BC000350FA1 /* Info.plist */,
-				845CAB8624C3176900350FA1 /* DetailModule */,
 			);
 			path = "TestTask-Pryaniky";
 			sourceTree = "<group>";
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				845CAB8724C3177600350FA1 /* Presenter */,
+				845CAB8C24C318EE00350FA1 /* View */,
 			);
 			path = DetailModule;
 			sourceTree = "<group>";
@@ -209,6 +214,15 @@
 				845CAB8424C3116400350FA1 /* DetailPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		845CAB8C24C318EE00350FA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845CAB8824C318E700350FA1 /* DetailViewController.swift */,
+				845CAB8924C318E700350FA1 /* DetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +331,7 @@
 			files = (
 				845CAB7224C216FB00350FA1 /* MainTableViewCell.xib in Resources */,
 				845CAB8324C3103500350FA1 /* MainViewController.xib in Resources */,
+				845CAB8B24C318E700350FA1 /* DetailViewController.xib in Resources */,
 				845CAB6A24C20C8B00350FA1 /* .gitignore in Resources */,
 				845CAB4624C20BC000350FA1 /* LaunchScreen.storyboard in Resources */,
 				845CAB4324C20BC000350FA1 /* Assets.xcassets in Resources */,
@@ -352,6 +367,7 @@
 				845CAB7124C216FB00350FA1 /* MainTableViewCell.swift in Sources */,
 				845CAB7924C2AC3700350FA1 /* NetworkService.swift in Sources */,
 				845CAB7D24C2BBFA00350FA1 /* MainPresenter.swift in Sources */,
+				845CAB8A24C318E700350FA1 /* DetailViewController.swift in Sources */,
 				845CAB3C24C20BBD00350FA1 /* SceneDelegate.swift in Sources */,
 				845CAB8224C3103500350FA1 /* MainViewController.swift in Sources */,
 			);

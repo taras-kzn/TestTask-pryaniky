@@ -46,7 +46,11 @@ extension MainViewController: UITableViewDataSource {
 }
 //MARK: - TableView Delegate
 extension MainViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = presenter.pryaniky?.data[indexPath.row]
+        let detailVC = ModuleBuilder.creatDetailModule(infoData: data)
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 //MARK: - MainViewProtocol
 extension MainViewController: MainViewProtocol {
