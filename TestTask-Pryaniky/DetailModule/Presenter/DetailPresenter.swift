@@ -51,12 +51,11 @@ class DetailPresenter: DetailViewPresenterProtocol {
     
     public func startVarinats() {
         guard let array = infoData?.data.variants else { return }
-        DispatchQueue.main.async {
-            for varinats in array {
-                if self.infoData?.data.selectedId == varinats.id {
-                    let varinat = varinats.text
-                    self.view?.setVarinats(varinat: varinat)
-                }
+        
+        for varinats in array {
+            if self.infoData?.data.selectedId == varinats.id {
+                let varinat = varinats.text
+                self.view?.setVarinats(varinat: varinat)
             }
         }
     }
