@@ -9,13 +9,24 @@
 /* Begin PBXBuildFile section */
 		845CAB3A24C20BBD00350FA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB3924C20BBD00350FA1 /* AppDelegate.swift */; };
 		845CAB3C24C20BBD00350FA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB3B24C20BBD00350FA1 /* SceneDelegate.swift */; };
-		845CAB3E24C20BBD00350FA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB3D24C20BBD00350FA1 /* ViewController.swift */; };
 		845CAB4124C20BBD00350FA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845CAB3F24C20BBD00350FA1 /* Main.storyboard */; };
 		845CAB4324C20BC000350FA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845CAB4224C20BC000350FA1 /* Assets.xcassets */; };
 		845CAB4624C20BC000350FA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845CAB4424C20BC000350FA1 /* LaunchScreen.storyboard */; };
 		845CAB5124C20BC100350FA1 /* TestTask_PryanikyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB5024C20BC100350FA1 /* TestTask_PryanikyTests.swift */; };
 		845CAB5C24C20BC100350FA1 /* TestTask_PryanikyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB5B24C20BC100350FA1 /* TestTask_PryanikyUITests.swift */; };
 		845CAB6A24C20C8B00350FA1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 845CAB6924C20C8B00350FA1 /* .gitignore */; };
+		845CAB7124C216FB00350FA1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB6F24C216FA00350FA1 /* MainTableViewCell.swift */; };
+		845CAB7224C216FB00350FA1 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845CAB7024C216FA00350FA1 /* MainTableViewCell.xib */; };
+		845CAB7724C2A7F600350FA1 /* Pryaniky.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB7624C2A7F600350FA1 /* Pryaniky.swift */; };
+		845CAB7924C2AC3700350FA1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB7824C2AC3700350FA1 /* NetworkService.swift */; };
+		845CAB7D24C2BBFA00350FA1 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB7C24C2BBFA00350FA1 /* MainPresenter.swift */; };
+		845CAB7F24C2EC9A00350FA1 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB7E24C2EC9A00350FA1 /* ModuleBuilder.swift */; };
+		845CAB8224C3103500350FA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB8024C3103500350FA1 /* MainViewController.swift */; };
+		845CAB8324C3103500350FA1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845CAB8124C3103500350FA1 /* MainViewController.xib */; };
+		845CAB8524C3116400350FA1 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB8424C3116400350FA1 /* DetailPresenter.swift */; };
+		845CAB8A24C318E700350FA1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB8824C318E700350FA1 /* DetailViewController.swift */; };
+		845CAB8B24C318E700350FA1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845CAB8924C318E700350FA1 /* DetailViewController.xib */; };
+		845CAB8E24C464E600350FA1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CAB8D24C464E600350FA1 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +50,6 @@
 		845CAB3624C20BBD00350FA1 /* TestTask-Pryaniky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestTask-Pryaniky.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845CAB3924C20BBD00350FA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845CAB3B24C20BBD00350FA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		845CAB3D24C20BBD00350FA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		845CAB4024C20BBD00350FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		845CAB4224C20BC000350FA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		845CAB4524C20BC000350FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +61,18 @@
 		845CAB5B24C20BC100350FA1 /* TestTask_PryanikyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTask_PryanikyUITests.swift; sourceTree = "<group>"; };
 		845CAB5D24C20BC100350FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845CAB6924C20C8B00350FA1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		845CAB6F24C216FA00350FA1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		845CAB7024C216FA00350FA1 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		845CAB7624C2A7F600350FA1 /* Pryaniky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pryaniky.swift; sourceTree = "<group>"; };
+		845CAB7824C2AC3700350FA1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		845CAB7C24C2BBFA00350FA1 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		845CAB7E24C2EC9A00350FA1 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		845CAB8024C3103500350FA1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		845CAB8124C3103500350FA1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		845CAB8424C3116400350FA1 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		845CAB8824C318E700350FA1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		845CAB8924C318E700350FA1 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		845CAB8D24C464E600350FA1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +124,17 @@
 		845CAB3824C20BBD00350FA1 /* TestTask-Pryaniky */ = {
 			isa = PBXGroup;
 			children = (
-				845CAB3924C20BBD00350FA1 /* AppDelegate.swift */,
+				845CAB7424C2A78B00350FA1 /* MainModule */,
+				845CAB8624C3176900350FA1 /* DetailModule */,
+				845CAB7A24C2B98100350FA1 /* Service */,
 				845CAB3B24C20BBD00350FA1 /* SceneDelegate.swift */,
-				845CAB3D24C20BBD00350FA1 /* ViewController.swift */,
+				845CAB7E24C2EC9A00350FA1 /* ModuleBuilder.swift */,
+				845CAB3924C20BBD00350FA1 /* AppDelegate.swift */,
 				845CAB3F24C20BBD00350FA1 /* Main.storyboard */,
 				845CAB4224C20BC000350FA1 /* Assets.xcassets */,
 				845CAB4424C20BC000350FA1 /* LaunchScreen.storyboard */,
 				845CAB4724C20BC000350FA1 /* Info.plist */,
+				845CAB8D24C464E600350FA1 /* Router.swift */,
 			);
 			path = "TestTask-Pryaniky";
 			sourceTree = "<group>";
@@ -129,6 +155,77 @@
 				845CAB5D24C20BC100350FA1 /* Info.plist */,
 			);
 			path = "TestTask-PryanikyUITests";
+			sourceTree = "<group>";
+		};
+		845CAB7324C2A76C00350FA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845CAB8024C3103500350FA1 /* MainViewController.swift */,
+				845CAB8124C3103500350FA1 /* MainViewController.xib */,
+				845CAB6F24C216FA00350FA1 /* MainTableViewCell.swift */,
+				845CAB7024C216FA00350FA1 /* MainTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		845CAB7424C2A78B00350FA1 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				845CAB7B24C2BBE200350FA1 /* Presenter */,
+				845CAB7524C2A79700350FA1 /* Model */,
+				845CAB7324C2A76C00350FA1 /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		845CAB7524C2A79700350FA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				845CAB7624C2A7F600350FA1 /* Pryaniky.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		845CAB7A24C2B98100350FA1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				845CAB7824C2AC3700350FA1 /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		845CAB7B24C2BBE200350FA1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				845CAB7C24C2BBFA00350FA1 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		845CAB8624C3176900350FA1 /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				845CAB8724C3177600350FA1 /* Presenter */,
+				845CAB8C24C318EE00350FA1 /* View */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		845CAB8724C3177600350FA1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				845CAB8424C3116400350FA1 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		845CAB8C24C318EE00350FA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845CAB8824C318E700350FA1 /* DetailViewController.swift */,
+				845CAB8924C318E700350FA1 /* DetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +332,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845CAB7224C216FB00350FA1 /* MainTableViewCell.xib in Resources */,
+				845CAB8324C3103500350FA1 /* MainViewController.xib in Resources */,
+				845CAB8B24C318E700350FA1 /* DetailViewController.xib in Resources */,
 				845CAB6A24C20C8B00350FA1 /* .gitignore in Resources */,
 				845CAB4624C20BC000350FA1 /* LaunchScreen.storyboard in Resources */,
 				845CAB4324C20BC000350FA1 /* Assets.xcassets in Resources */,
@@ -263,9 +363,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845CAB3E24C20BBD00350FA1 /* ViewController.swift in Sources */,
+				845CAB8E24C464E600350FA1 /* Router.swift in Sources */,
 				845CAB3A24C20BBD00350FA1 /* AppDelegate.swift in Sources */,
+				845CAB7724C2A7F600350FA1 /* Pryaniky.swift in Sources */,
+				845CAB8524C3116400350FA1 /* DetailPresenter.swift in Sources */,
+				845CAB7F24C2EC9A00350FA1 /* ModuleBuilder.swift in Sources */,
+				845CAB7124C216FB00350FA1 /* MainTableViewCell.swift in Sources */,
+				845CAB7924C2AC3700350FA1 /* NetworkService.swift in Sources */,
+				845CAB7D24C2BBFA00350FA1 /* MainPresenter.swift in Sources */,
+				845CAB8A24C318E700350FA1 /* DetailViewController.swift in Sources */,
 				845CAB3C24C20BBD00350FA1 /* SceneDelegate.swift in Sources */,
+				845CAB8224C3103500350FA1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
